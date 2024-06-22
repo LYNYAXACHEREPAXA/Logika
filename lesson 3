@@ -1,0 +1,36 @@
+from PyQt5.QtCore import Qt
+from PyQt5.QtWidgets import QApplication, QWidget, QPushButton, QLabel, QVBoxLayout, QHBoxLayout, QMessageBox, QRadioButton
+
+app = QApplication([])
+
+main_window = QWidget()
+main_window.setWindowTitle('Конкурс від Crazy People')
+main_window.resize(400, 200)
+
+question = QLabel('У якому році випустили Ван Піс на екранах?')
+
+but_1 = QRadioButton('1995')
+but_2 = QRadioButton('1999')
+but_3 = QRadioButton('2006')
+but_4 = QRadioButton('1997')
+
+Grid_V = QVBoxLayout()
+
+A_Grid_H = QHBoxLayout()
+B_Grid_H = QHBoxLayout()
+C_Grid_H = QHBoxLayout()
+
+
+A_Grid_H.addWidget(question, alignment=Qt.AlignCenter)
+B_Grid_H.addWidget(but_1, alignment=Qt.AlignCenter)
+B_Grid_H.addWidget(but_2, alignment=Qt.AlignCenter)
+C_Grid_H.addWidget(but_3, alignment=Qt.AlignCenter)
+C_Grid_H.addWidget(but_4, alignment=Qt.AlignCenter)
+
+Grid_V.addLayout(A_Grid_H)
+Grid_V.addLayout(B_Grid_H)
+Grid_V.addLayout(C_Grid_H)
+
+main_window.setLayout(Grid_V)
+main_window.show()
+app.exec_()
