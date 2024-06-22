@@ -7,12 +7,12 @@ main_window = QWidget()
 main_window.setWindowTitle('Конкурс від Crazy People')
 main_window.resize(400, 200)
 
-question = QLabel('У якому році екранізували Ван Піс?')
+question = QLabel('У якому році екранізували Ван Піс? 🖥🎇')
 
-but_1 = QRadioButton('2006')
-but_2 = QRadioButton('1999')
-but_3 = QRadioButton('2024')
-but_4 = QRadioButton('1997')
+but_1 = QRadioButton('✨2006✨')
+but_2 = QRadioButton('✨1999✨')
+but_3 = QRadioButton('✨2024✨')
+but_4 = QRadioButton('✨1997✨')
 
 Grid_V = QVBoxLayout()
 
@@ -33,12 +33,12 @@ Grid_V.addLayout(C_Grid_H)
 
 def show_win():
     win_text = QMessageBox()
-    win_text.setText('Вітаю фанате! Ви виграли 3 останні томи манги!')
+    win_text.setText('Вітаю фанате! Ви виграли 3 останні томи манги!🎉')
     win_text.exec()
 
 def show_lose():
     lose_text = QMessageBox()
-    lose_text.setText('Схоже, що ви ще не ознайомлені з Ван Пісом. Ви виграли стікер')
+    lose_text.setText('Схоже, що ви ще не ознайомлені з Ван Пісом. Ви виграли стікер 😐')
     lose_text.exec()
 
 but_2.clicked.connect(show_win)
